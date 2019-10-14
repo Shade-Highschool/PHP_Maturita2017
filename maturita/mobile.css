@@ -1,0 +1,295 @@
+﻿/*    ========Basic=========    */
+html,body
+{
+	margin: 0px;
+	padding: 0px;
+        font-size: 20px;
+        background:#333333;
+        height:100%;
+}
+#wrapper {
+    flex-direction: column;
+    display: flex;
+    width:100%;
+    height:100%;
+} /* Rozhození divů na jednu stránku pomocí flex column */
+
+/*    ========Basic=========    */
+
+/*    =================Menu===========    */
+#menu
+{
+    background: #333333;
+}
+.logo 
+{
+    height:150px;
+    width:200px;
+    margin: 0 auto;
+}
+.logo img
+{
+  width: 100%;
+  height:100%;
+} /* Logo vlevo, aby se nedeformoval obrázek */
+.menu-items ul
+{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    list-style-type: none;
+    font-size: 0px;  /* Fix bug => inline-block vytvoří "mezeru". Tohle to spraví */
+} /*Zničí její přednastavenej margin a zarovná text na střed */
+.menu-items li 
+{
+  font-family: 'Oswald', sans-serif;
+}
+.menu-items li a
+{
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  padding:15px 0px; /* Aby item byl stejně velký jako menu */
+  transition-duration: 0.4s;
+  display:block;
+  width:100%;
+}
+.menu-items li a:hover
+{
+  background: #cc3333;
+}
+.menu-items .active a, footer .active a
+{
+  background: #cc3333;
+  pointer-events: none;
+  cursor: default;
+}
+
+.administration
+{
+  border-radius: 5px;
+  margin:10px;
+  height: 60px;
+  width: 60px;
+  background-image: url("images/ikony/administrace.png");
+  background-size: 100%;
+  transition-duration: 0.4s;
+  top:0px;
+  right:0px;
+  position:absolute;
+} /* Administrace zarovnaná doprava */
+.administration a
+{
+  display: block;
+    height: 100%;
+    width: 100%;
+  text-decoration: none;
+  color:white;/*Stejně velké jako celej div, aby to bylo clickable */
+}
+.administration:hover
+{
+  background-color: #ff0000;
+}
+
+
+          /* Nebude lepší přes flex? ? */
+/*    =================Menu===========    */
+
+/* ===================Hlavní kontext==============  */
+
+/* Main */
+.content
+{
+  display: none;
+  background-image: url("images/wallpaper.jpg");
+
+} /* Content bude schovaný dokud nebude active */
+
+main .active
+{
+  display: block;
+  background-color: black;
+  background-size: cover;
+  height: 100%;
+}
+main {
+    flex: 1;
+  } /* Hlavní flex řádek, ostatní se uzpůsobí tomuto */
+  /* End main */
+/* Home */
+.seznamClanku p, .komenty p
+{
+    color:#7b8c97;
+}
+.seznamClanku {padding-top:50px;}
+.seznamClanku table, .komenty table
+{
+    margin-bottom: 50px;
+    border: 1px solid grey;
+    width:100%;
+    background: rgba(0,0,0,.7);
+}
+.seznamClanku table td, .komenty table td
+{
+    padding:10px;
+}
+/* end Home */
+  /* onas */
+main .onas h1
+{
+  color: #cc3333;
+  margin:0px;
+}
+main .onas .wrap
+{
+  color: #7b8c97;
+  width: 100%;
+}
+main .onas .wrap div
+{
+  padding-top: 100px;
+  text-align:center;
+}
+main .onas .wrap .tvarpaleni img
+{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+main .onas .wrap .tvarpaleni
+{
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* end onas */
+
+/* technologie */
+main .technologie .wrap
+{
+  color:#7b8c97;
+  width: 100%;
+}
+main .technologie .wrap h1,h2
+{
+  color: #cc3333;
+  margin-top:0px;
+}
+main .technologie .wrap .images
+{
+    display:none;
+}
+main .technologie .wrap .postup div
+{
+  border: 1px solid #7b8c97;
+  font-size: 19px;
+  margin: 5px;
+  padding-left: 15px;
+}
+/* end technologie */
+/* kontakt */
+main .kontakt .wrap
+{
+  width: 100%;
+}
+main .kontakt .kontakty
+{
+    text-align: center;
+    padding-top: 20px;
+}
+main .kontakt .kontakty div
+{
+  display: inline-block;
+  padding-right:25px;
+}
+main .kontakt .lokace
+{
+  color: white;
+}
+main .kontakt .lokace .popisny
+{
+    text-align: center;
+}
+main .kontakt iframe
+{
+    height:450px;
+    width:100%;
+}
+/* end kontakt */
+/* Guestbook */
+main .kniha form
+{
+    font-size: 15px;
+    padding:20px;
+    background: rgba(0,0,0,.5);
+    color: white;
+}
+main .kniha form h3
+{
+    margin:0px;
+    margin-bottom: 15px;
+    color:#cc3333;
+}
+main .kniha input
+{
+    width: 100%;
+    height:30px;
+}
+main .kniha .submit
+{
+    height:74px;
+    width:50%;
+    background:#cc3333;
+    color:white;
+    transition:0.5s;
+    cursor:pointer;
+    float:right;
+}
+main .submit:hover
+{
+    background:red;
+}
+/* End guestbook */
+
+/* ===================Hlavní kontext==============  */
+
+/* ===================Patička===================== */
+
+  footer
+  {
+    background-color: black;
+    color: white;
+    font-family: "Century Gothic";
+    display: flex;
+    min-height: min-content;
+    /** fix bug, chrome scroll = bílej footer */
+  }
+  footer div {margin:auto;}
+  footer img
+  {
+      transition-duration: 0.4s;
+    border-radius: 5px;
+    display: block;
+    height: 50px;
+    width:55px;
+    margin-left: 15px;
+  }
+  footer img:hover
+  {
+  background-color: #cc3333;
+  }
+  footer .middleFooter
+  {
+     flex: 1;
+     text-align: center;
+  }
+  footer .facebook
+  {
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+  footer .facebook img:hover
+  {
+    background:#3b5998;
+  }
+  /* ===================Patička===================== */

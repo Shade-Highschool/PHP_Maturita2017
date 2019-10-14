@@ -1,0 +1,76 @@
+html, body
+{
+    margin:0px;
+    height: 100%;
+    width:100%;
+    
+    background-color: black;
+    background-image: url("../images/wallpaper.jpg");
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    display:flex;
+}
+ 
+.login
+{
+  width: 400px;
+  margin: auto; /* Díky flex tohle zarovná vertikálně i horizontálně*/
+  font-size: 16px;
+}
+
+/* Reset */
+.login p, h2
+{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.login-header
+{
+  background: #cc3333;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.login-container
+{
+  padding: 5px;
+  background:#333333;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p
+{
+  padding: 12px;
+}
+
+.login input
+{
+  border:1px solid grey;
+  box-sizing: border-box; /* width:100% včetně okrajů a paddingů atd. */
+  width: 100%;
+  padding: 16px;
+}
+
+.login .username,
+.login .password
+{
+  background: #fff;
+  color: #555;
+}
+
+.login .submit
+{
+  text-align:center;
+  background: #cc3333;
+  color: #fff;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.login .submit:hover
+{
+  background: red;
+}
