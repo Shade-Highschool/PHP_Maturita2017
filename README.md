@@ -2,4 +2,6 @@
 Spoje Maturita 2017 - Webové stránky - Tvarové pálení
 
 Psáno čistě bez frameworků, bez MVC, bez OOP.
-Využito pouze jquery
+Využito pouze jquery a PHP.
+
+Nově přidáno do dockeru
